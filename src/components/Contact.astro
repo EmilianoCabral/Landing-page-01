@@ -1,34 +1,42 @@
-<article class="flex pb-4">
-  <div class="...">
-    <form class="flex flex-col" id="contactForm">
-      <label for="name">Nombre:</label>
-      <input
-        type="text"
-        name="Username"
-        class="input input-bordered input-info w-full max-w-xs"
-        required
-      />
-
-      <label for="email">Correo Electrónico:</label>
-      <input
-        type="email"
-        name="email"
-        class="input input-bordered input-info w-full max-w-xs"
-        required
-      />
-      <label for="message">Mensaje:</label>
-      <textarea 
-      name="Mensaje" 
-      class="textarea textarea-info" 
-      required
-      ></textarea>
-
-        <button 
-        type="submit"
-        class="btn btn-outline btn-info">Enviar</button>
+<article class="flex justify-center aling pb-4">
+  <div class="w-full">
+    <form class="grid grid-cols-12 gap-3" id="contactForm">
+      <div class="col-span-4">
+        <input
+          type="text"
+          placeholder="Nombre"
+          name="Username"
+          class="input input-bordered input-info w-full mb-4"
+          required
+        />
+        <input
+        placeholder="Email"
+          type="email"
+          name="email"
+          class="input input-bordered input-info w-full mb-4"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Telefono"
+          name="phone"
+          class="input input-bordered input-info w-full">
+      </div>
+      <div class="col-span-8">
+        <textarea 
+          placeholder="Consulta"
+          name="Mensaje" 
+          class="textarea textarea-info w-full h-28 resize-none mb-2" 
+          required
+        >
+        </textarea>
+        <div>
+          <button 
+            type="submit"
+            class="btn btn-outline btn-info w-full">Enviar
+          </button>
+        </div>
+      </div>
     </form>
-  </div>
-  <div>
-    <img class="shadow-black h-[45rem]" src="/public/img/img-02.jpg" alt="" />
   </div>
 </article>

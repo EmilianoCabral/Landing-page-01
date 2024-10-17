@@ -1,21 +1,36 @@
-<div class="py-2">
-  <div class="card bg-base-100 w-96 shadow-xl">
-    <figure>
-      <img
-        src="https://placehold.co/600x400"
-        alt="Shoes"
-      />
-    </figure>
-    <div class="card-body">
-      <h2 class="card-title">
-        Shoes!
-        <div class="badge badge-secondary">NEW</div>
-      </h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      <div class="card-actions justify-end">
-        <div class="badge badge-outline">Fashion</div>
-        <div class="badge badge-outline">Products</div>
-      </div>
-    </div>
-  </div>
+---
+const CARDS = [
+  {
+    title: "hola",
+    description:
+      "Asesoramiento a empresas y particulares. Registración Laboral. Despidos. Empleo no registrado. Accidentes de trabajo",
+    image: "",
+  },
+  {
+    title: "nashe",
+    description: "wfwef",
+    image: "...",
+  },
+  {
+    title: "nashe",
+    description: "wfwef",
+    image: "...",
+  },
+];
+---
+
+<div class="py-40 flex justify-center flex-wrap gap-12">
+  {
+    CARDS.map(({ title, description, image }) => (
+        <div class=" card bg-base-100 w-96 shadow-xl">
+          <figure>
+            <img src="https://placehold.co/600x400" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">{title}</h2>
+            <p>{description}</p>
+          </div>
+        </div>
+    ))
+  }
 </div>

@@ -3,34 +3,29 @@ import Card from "../components/Card.astro";
 import Container from "../components/Container.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import Abautus from "../components/Abautus.astro"
+import Abautus from "../components/Abautus.astro";
 import Contact from "../components/Contact.astro";
 ---
+
 <Layout title="Estudio juridico" description="...">
   <main class="bg-white">
     <section>
-      <div class="">
+      <div>
         <Hero />
       </div>
     </section>
     <div class="space-y-24">
+      <Container>
+        <Card />
+      </Container>
 
-		<Container class="px-4">
-			<Abautus/>
-		</Container>
+      <Container>
+        <Abautus />
+      </Container>
 
-		<Container class="px-4">
-			<div class="flex flex-wrap justify-center py-24 gap-x-4">
-				<Card/>
-				<Card/>
-				<Card/>
-			</div>
-		</Container>
-
-		<Container class="px-4">
-			<Contact/>
-		</Container>
-
-	</div>
+      <Container>
+        <Contact />
+      </Container>
+    </div>
   </main>
 </Layout>
