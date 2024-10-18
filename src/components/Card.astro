@@ -1,27 +1,37 @@
 ---
 const CARDS = [
   {
-    title: "hola",
+    title: "DERECHO LABORAL",
     description:
       "Asesoramiento a empresas y particulares. Registración Laboral. Despidos. Empleo no registrado. Accidentes de trabajo",
     image: "",
   },
   {
-    title: "nashe",
-    description: "wfwef",
+    title: "DERECHO SUCESORIO",
+    description:
+      "Sucesiones inmediatas, declaratoria de herederos y liquidacion de bienes, acuerdos hereditarios y testamentarios,",
     image: "...",
   },
   {
-    title: "nashe",
-    description: "wfwef",
+    title: "DERECHO DE FAMILIA",
+    description:
+      "Resolución de conflictos en la relaciones familiares. Divorcio. Cuidado Personal de los hijos. Alimentos. Violencia Familiar y de Género.",
     image: "...",
   },
 ];
 ---
 
-<div class="py-40 flex justify-center flex-wrap gap-12">
-  {
-    CARDS.map(({ title, description, image }) => (
+<div>
+  <h1 class="text-4xl text-center pb-4 font-bold tracking-tight text-black sm:text-6xl">
+    Responsabilidades
+  </h1>
+  <p class="text-center text-gray-500 text-2xl">
+    "Ofrecemos asesoría legal personalizada a empresas y particulares,
+    combinando conocimiento jurídico con soluciones innovadoras."
+  </p>
+  <div class="py-8 flex justify-center flex-wrap gap-12">
+    {
+      CARDS.map(({ title, description, image }) => (
         <div class=" card bg-base-100 w-96 shadow-xl">
           <figure>
             <img src="https://placehold.co/600x400" alt="Shoes" />
@@ -31,6 +41,7 @@ const CARDS = [
             <p>{description}</p>
           </div>
         </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </div>

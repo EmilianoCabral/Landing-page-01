@@ -5,6 +5,8 @@ import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Abautus from "../components/Abautus.astro";
 import Contact from "../components/Contact.astro";
+import Contacto from "../components/Contacto.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Estudio juridico" description="...">
@@ -16,11 +18,19 @@ import Contact from "../components/Contact.astro";
     </section>
     <div class="space-y-24">
       <Container>
+        <Abautus />
+      </Container>
+
+      <Container>
         <Card />
       </Container>
 
       <Container>
-        <Abautus />
+        <Experience/>
+      </Container>
+
+      <Container>
+        <Contacto />
       </Container>
 
       <Container>

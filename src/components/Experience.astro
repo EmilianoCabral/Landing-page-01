@@ -1,0 +1,30 @@
+---
+import Experienceitem from "./Experienceitem.astro"
+
+const EXPERIENCE = [
+    {
+        title:"Derecho laboral",
+        description:"Despidos, Suspenciones, Trabajo no registrado, Acoso laboral",
+        link:''
+    },
+    {
+        title:"Derecho sucesorio",
+        description:"Suceciones, Testamentos, Tasaciones judiciales, Inscripcion por tracto abreviado",
+        link:''
+    },
+    {
+        title:"Derecho de familia",
+        description:"Divorcios, División de vienes, Acuerdos, Régimen de comunicacion, Cuidado personal de hijos ",
+        link:''
+    },
+]
+---
+<ol class="relative mt-16">
+    {
+        EXPERIENCE.map((experiencie) => (
+            <li class="">
+                <Experienceitem {...experiencie} />
+            </li>
+        ))
+    }
+</ol>
