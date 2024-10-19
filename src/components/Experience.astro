@@ -1,27 +1,30 @@
 ---
-import Experienceitem from "./Experienceitem.astro"
+import Experienceitem from "./Experienceitem.astro";
 
 const EXPERIENCE = [
-    {
-        title:"Derecho laboral",
-        description:"Despidos, Suspenciones, Trabajo no registrado, Acoso laboral",
-    },
-    {
-        title:"Derecho sucesorio",
-        description:"Suceciones, Testamentos, Tasaciones judiciales, Inscripcion por tracto abreviado",
-    },
-    {
-        title:"Derecho de familia",
-        description:"Divorcios, División de vienes, Acuerdos, Régimen de comunicacion, Cuidado personal de hijos ",
-    },
-]
+  {
+    title: "Derecho laboral",
+    description: "Despidos, Suspenciones, Trabajo no registrado, Acoso laboral",
+  },
+  {
+    title: "Derecho sucesorio",
+    description:
+      "Suceciones, Testamentos, Tasaciones judiciales, Inscripcion por tracto abreviado",
+  },
+  {
+    title: "Derecho de familia",
+    description:
+      "Divorcios, División de vienes, Acuerdos, Régimen de comunicacion, Cuidado personal de hijos ",
+  },
+];
 ---
+
 <ol class="relative mt-16">
-    {
-        EXPERIENCE.map((experiencie) => (
-            <li class="">
-                <Experienceitem {...experiencie} />
-            </li>
-        ))
-    }
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <Experienceitem {...experience} />
+      </li>
+    ))
+  }
 </ol>
