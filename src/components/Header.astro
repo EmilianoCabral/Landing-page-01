@@ -1,24 +1,19 @@
 ---
 const navItems = [
   {
+    title: "Nosotros",
+    label: "Nosotros",
+    url: "/#Nosotros",
+  },
+  {
     title: "Experiencia",
     label: "experiencia",
     url: "/#experiencia",
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
-  },
-  {
-    title: "Nosotros",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
-  },
-  {
     title: "Contacto",
     label: "contacto",
-    url: "mailto:emicabral95@gmail.com",
+    url: "/#Contacto",
   },
 ];
 ---
@@ -31,7 +26,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-[#D1BB9E] dark:hover:text-[#D1BB9E]"
+          class="relative block px-2 py-2 transition hover:text-[#D1BB9E] dark:hover:text-[#c8a77c]"
           aria-label={link.label}
           href={link.url}
         >
