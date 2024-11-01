@@ -1,40 +1,40 @@
 ---
 const CARDS = [
   {
-    title: "DERECHO LABORAL",
+    title: "LABOR LAW",
     description:
-      "Asesoramiento a empresas y particulares. Registración Laboral. Despidos. Empleo no registrado. Accidentes de trabajo",
-    image: "",
+      "Advice to companies and individuals. Employment Registration. Dismissals. Unregistered employment. Workplace accidents.",
+    image: "/public/img/img-011.jpg",
   },
   {
-    title: "DERECHO SUCESORIO",
+    title: "SUCCESSION LAW",
     description:
-      "Sucesiones inmediatas, declaratoria de herederos y liquidacion de bienes, acuerdos hereditarios y testamentarios,",
-    image: "...",
+      "Immediate successions, declaration of heirs and liquidation of assets, inheritance and testamentary agreements,",
+    image: "/public/img/img-09.jpg",
   },
   {
-    title: "DERECHO DE FAMILIA",
+    title: "FAMILY LAW",
     description:
-      "Resolución de conflictos en la relaciones familiares. Divorcio. Cuidado Personal de los hijos. Alimentos. Violencia Familiar y de Género.",
-    image: "...",
+      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
+    image: "/public/img/img-012.jpg",
   },
 ];
 ---
 
 <div id="experiencia" class="pt-20">
   <h1 class="text-4xl text-center pb-16 font-bold tracking-tight text-black sm:text-6xl">
-    Responsabilidades
+    Responsibilities
   </h1>
   <p class="text-center text-gray-700 text-2xl ">
-    "Ofrecemos asesoría legal personalizada a empresas y particulares,
-    combinando conocimiento jurídico con soluciones innovadoras."
+    "We offer personalized legal advice to companies and individuals,
+      combining legal knowledge with innovative solutions."
   </p>
-  <div class="py-8 flex justify-center flex-wrap gap-12">
+  <div class="py-8 flex justify-center flex-wrap gap-4">
     {
       CARDS.map(({ title, description, image }) => (
-        <div class=" card bg-base-100 w-96 shadow-xl">
+        <div class=" card bg-base-100 w-80 shadow-xl">
           <figure>
-            <img src="https://placehold.co/600x400" alt="Shoes" />
+            <img loading="lazy" src={image} alt="Shoes" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">{title}</h2>
