@@ -1,0 +1,49 @@
+---
+const LOW = [
+  {
+    name: "Jackson Bauer",
+    description: "Finance Lawyer",
+    image: "./img/img-07.png",
+  },
+  {
+    name: "Stephanie Reilly",
+    description: "Criminal Defence Lawyer",
+    image: "./img/img-06.png",
+  },
+  {
+    name: "Matthew Webb",
+    description: "Tax Lawyer",
+    image: "./img/img-05.png",
+  },
+];
+---
+
+<section id="About-us" class="text-center pt-20">
+  <div>
+    <h1 class="text-4xl font-bold pb-8 tracking-tight text-black sm:text-6xl">
+      About Us
+    </h1>
+  </div>
+  <div>
+    <p class="mt-6 text-2xl leading-8 text-gray-700">
+      "Our law firm delivers trusted legal solutions with integrity,
+      professionalism, and personalized expertise, built on years of experience
+      and client trust."
+    </p>
+  </div>
+  <article class="flex flex-wrap justify-center gap-2 pt-8">
+    {
+      LOW.map(({ name, description, image }) => (
+        <div>
+          <div>
+            <img src={image} alt="image the representative" />
+          </div>
+          <div>
+            <h1 class="text-xl font-bold pt-8 text-black">{name}</h1>
+            <p class="text-[#c8a77c]">{description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </article>
+</section>

@@ -1,43 +1,39 @@
 ---
 
-
 import Card from "../components/Card.astro";
 import Container from "../components/Container.astro";
 import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
-import Abautus from "../components/Abautus.astro";
+import Aboutus from "../components/Aboutus.astro";
 import Contact from "../components/Contact.astro";
-import Contacto from "../components/Contacto.astro";
-import Experience from "../components/Experience.astro";
 import Maps from "../components/Maps.astro";
+import Question from "../components/Question.astro";
+import Titlesection from "../components/Titlesection.astro";
 
 ---
 
 <Layout title="Estudio juridico" description="Con años de experiencia y un compromiso inquebrantable">
   <main class="bg-white">
     <section>
-      <div>
         <Hero />
-      </div>
     </section>
     <div class="space-y-24">
       <Container>
-        <Abautus />
+        <Aboutus />
+      </Container>
+
+      <Container>
+        <Question/>
       </Container>
 
       <Container>
         <Card />
       </Container>
 
-      <Container >
-        <Experience/>
-      </Container>
-
-      <Container>
-        <Contacto />
-      </Container>
-
-      <Container>
+      <Container id="Contact">
+        <Titlesection >
+          Contact us
+        </Titlesection>
         <Contact />
       </Container>
 

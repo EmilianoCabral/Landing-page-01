@@ -1,29 +1,81 @@
 ---
+
+import Banking from "../../public/icons/banking.astro";
+import DiversityFamily from "../../public/icons/diversity-family.astro";
+import HistoryEdu from "../../public/icons/history-edu.astro";
+import HouseShield from "../../public/icons/house-shield.astro";
+import Shield from "../../public/icons/shield.astro";
+
+const TAGS = {
+  Banking: {
+    name: "Banking",
+    class: "bg-black text-white",
+    icon: Banking,
+  },
+  DiversityFamily: {
+    name: "DiversityFamily",
+    class: "bg-black text-white",
+    icon: DiversityFamily,
+  },
+  HistoryEdu: {
+    name: "HistoryEdu",
+    class: "bg-black text-white",
+    icon: HistoryEdu,
+  },
+  HouseShield: {
+    name: "HouseShield",
+    class: "bg-black text-white",
+    icon: HouseShield,
+  },
+  Shield: {
+    name: "Shield",
+    class: "bg-black text-white",
+    icon: Shield,
+  }
+};
 const CARDS = [
   {
-    title: "LABOR LAW",
+    title: "Banking and Finance",
     description:
-      "Advice to companies and individuals. Employment Registration. Dismissals. Unregistered employment. Workplace accidents.",
-    image: "/public/img/img-011.jpg",
+      "Varius quisque odio mauris lectus consequat sed. Pretium purus feugiat volut",
+    tags: [TAGS.Banking]
   },
   {
-    title: "SUCCESSION LAW",
+    title: "Corporate Law",
     description:
       "Immediate successions, declaration of heirs and liquidation of assets, inheritance and testamentary agreements,",
-    image: "/public/img/img-09.jpg",
+      tags: [TAGS.HistoryEdu],
   },
   {
-    title: "FAMILY LAW",
+    title: "Family Law",
     description:
       "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
-    image: "/public/img/img-012.jpg",
+      tags: [TAGS.DiversityFamily],
+  },
+  {
+    title: "Business Law",
+    description:
+      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
+      tags: [TAGS.HouseShield],
+  },
+  {
+    title: "Criminal Law",
+    description:
+      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
+      tags: [TAGS.Shield],
+  },
+  {
+    title: "Real Estate",
+    description:
+      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
+      tags: [TAGS.DiversityFamily],
   },
 ];
 ---
 
-<div id="experiencia" class="pt-20">
+<div id="experiencie" class="pt-20">
   <h1 class="text-4xl text-center pb-16 font-bold tracking-tight text-black sm:text-6xl">
-    Responsibilities
+    Practice Areas
   </h1>
   <p class="text-center text-gray-700 text-2xl ">
     "We offer personalized legal advice to companies and individuals,
@@ -31,14 +83,22 @@ const CARDS = [
   </p>
   <div class="py-8 flex justify-center flex-wrap gap-4">
     {
-      CARDS.map(({ title, description, image }) => (
-        <div class=" card bg-base-100 w-80 shadow-xl">
+      CARDS.map(({ title, description,tags }) => (
+        <div class="card bg-base-100 w-72 shadow-xl">
           <figure>
-            <img loading="lazy" src={image} alt="Shoes" />
+            <ul class="pt-4">
+              {tags.map((tag)=>(
+                <li>
+                  <span >
+                    <tag.icon class="size-4" />
+                  </span>
+                </li>
+              ))}
+            </ul>
           </figure>
           <div class="card-body">
-            <h2 class="card-title">{title}</h2>
-            <p>{description}</p>
+            <h2 class="card-title text-orange-300">{title}</h2>
+            <p class="">{description}</p>
           </div>
         </div>
       ))
