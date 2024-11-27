@@ -4,33 +4,27 @@ import Banking from "../../public/icons/banking.astro";
 import DiversityFamily from "../../public/icons/diversity-family.astro";
 import HistoryEdu from "../../public/icons/history-edu.astro";
 import HouseShield from "../../public/icons/house-shield.astro";
+import Pencil from "../../public/icons/pencil.astro";
 import Shield from "../../public/icons/shield.astro";
 
 const TAGS = {
   Banking: {
-    name: "Banking",
-    class: "bg-black text-white",
-    icon: Banking,
+    icon: Banking
   },
   DiversityFamily: {
-    name: "DiversityFamily",
-    class: "bg-black text-white",
-    icon: DiversityFamily,
+    icon: DiversityFamily
   },
   HistoryEdu: {
-    name: "HistoryEdu",
-    class: "bg-black text-white",
-    icon: HistoryEdu,
+    icon: HistoryEdu
   },
   HouseShield: {
-    name: "HouseShield",
-    class: "bg-black text-white",
-    icon: HouseShield,
+    icon: HouseShield
   },
   Shield: {
-    name: "Shield",
-    class: "bg-black text-white",
-    icon: Shield,
+    icon: Shield
+  },
+  pencil: {
+    icon: Pencil
   }
 };
 const CARDS = [
@@ -55,25 +49,25 @@ const CARDS = [
   {
     title: "Business Law",
     description:
-      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
-      tags: [TAGS.HouseShield],
+      "Legal Basis for the Creation, Management and Protection of Businesses",
+      tags: [TAGS.pencil],
   },
   {
     title: "Criminal Law",
     description:
-      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
+      "Legal Principles for the Prevention, Prosecution and Punishment of Crimes",
       tags: [TAGS.Shield],
   },
   {
     title: "Real Estate",
     description:
-      "Conflict resolution in family relationships. Divorce. Personal care of children. Alimony. Domestic and gender violence.",
-      tags: [TAGS.DiversityFamily],
+      "Regulations and Legal Principles for Property and Real Estate Transactions",
+      tags: [TAGS.HouseShield],
   },
 ];
 ---
 
-<div id="experiencie" class="pt-20">
+<div id="experiencie" class="pt-16 ">
   <h1 class="text-4xl text-center pb-16 font-bold tracking-tight text-black sm:text-6xl">
     Practice Areas
   </h1>
@@ -81,10 +75,10 @@ const CARDS = [
     "We offer personalized legal advice to companies and individuals,
       combining legal knowledge with innovative solutions."
   </p>
-  <div class="py-8 flex justify-center flex-wrap gap-4">
+  <div class="pt-8 flex justify-center flex-wrap gap-4">
     {
       CARDS.map(({ title, description,tags }) => (
-        <div class="card bg-base-100 w-72 shadow-xl">
+        <div class="card bg-[#1D232A] w-80 shadow-xl">
           <figure>
             <ul class="pt-4">
               {tags.map((tag)=>(
@@ -98,7 +92,7 @@ const CARDS = [
           </figure>
           <div class="card-body">
             <h2 class="card-title text-orange-300">{title}</h2>
-            <p class="">{description}</p>
+            <p class="text-gray-300">{description}</p>
           </div>
         </div>
       ))

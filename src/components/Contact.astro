@@ -1,26 +1,74 @@
 ---
+import Calendar from "../../public/icons/calendar.astro";
+import handshake from "../../public/icons/handshake.astro";
+import schedule from "../../public/icons/schedule.astro";
 
+const ICONS = {
+  calendar: {
+    icon: Calendar,
+  },
+  handshake: {
+    icon: handshake,
+  },
+  schedule: {
+    icon: schedule,
+  },
+};
+
+const INFO = [
+  {
+    title: "Successful planning",
+    description: "Effective Strategies to Achieve Goals and Maximize Results ",
+    icon: [ICONS.handshake],
+  },
+  {
+    title: "Schedule a time",
+    description:
+      "Efficient Organization to Maximize Your Productivity and Meet Deadlines",
+    icon: [ICONS.calendar],
+  },
+  {
+    title: "Opening Hours",
+    description: "Mon-Fri 08:00AM - 08:00PM",
+    icon: [ICONS.schedule],
+  },
+];
 ---
 
-<article class="flex justify-center bg-[#1D232A] p-8 rounded-2xl">
-  <section class="text-center">
-    <div>
-      <p
-        class="
-              text-base
-              leading-8
-              text-gray-400"
-      >
-        Your question is not a bother, you are just one click away from starting
-        to resolve your concerns, fill out the form below and you will be answered
-        as soon as possible. More than 40 years of experience await you.
-      </p>
-    </div>
-    <div>
-      <span>
-      </span>
-    </div>
-  </section>
+<article
+  class="flex justify-center sm:flex-nowrap flex-wrap items-center bg-[#1D232A] lg:p-8 p-4 rounded-2xl"
+>
+  <div class="lg:p-8 p-4">
+    <section class="text-center">
+      <div>
+        <p class="text-base
+        leading-8
+        text-gray-300">
+          Your question is not a bother, you are just one click away from
+          starting to resolve your concerns, fill out the form below and you
+          will be answered as soon as possible. More than 40 years of experience
+          await you.
+        </p>
+      </div>
+    </section>
+    <section>
+      {
+        INFO.map(({ title, description, icon }) => (
+          <div class="flex justify-between py-4  items-center">
+            <div>
+              <h2 class="pb-4 text-lg text-orange-300">{title}</h2>
+              <p class="text-gray-300">{description}</p>
+            </div>
+            <div class="p-4">
+              {icon.map(({ icon: Icon }) => (
+                <Icon />
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </div>
   <div class="w-full">
     <form class="lg:grid gap-4 block" id="contactForm">
       <div>
@@ -28,38 +76,47 @@
           type="text"
           placeholder="Name"
           name="Username"
-          class="input input-bordered border border-orange-300 input-info w-full mb-4"
+          class="input input-bordered input-warning border border-orange-300 w-full mb-8"
           required
         />
         <input
-        placeholder="Email"
+          placeholder="Email"
           type="email"
           name="email"
-          class="input input-bordered border border-orange-300 input-info w-full mb-4"
+          class="input input-bordered input-warning border border-orange-300 w-full mb-8"
           required
         />
         <input
           type="text"
           placeholder="phone"
           name="phone"
-          class="input input-bordered border border-orange-300 input-info w-full mb-4">
+          class="input input-bordered input-warning border border-orange-300 w-full mb-8"
+        />
       </div>
       <div>
-        <textarea 
+        <textarea
           placeholder="Consulta"
-          name="Message" 
-          class="textarea textarea-info border border-orange-300 w-full h-28 resize-none mb-2" 
+          name="Message"
+          class="input input-bordered input-warning border border-orange-300 w-full h-28 resize-none mb-2"
           required
         >
         </textarea>
         <div>
-          <button 
-            type="submit"
-            class="btn btn-outline btn-info w-full">
+          <button type="submit" class="btn btn-outline btn-warning w-full">
             Send
           </button>
         </div>
       </div>
     </form>
   </div>
+</article>
+<article class="pb-40">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1069.7656585765062!2d-73.94323991372633!3d40.679384391141454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20Florida%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1732721938047!5m2!1ses-419!2sar"
+    width="100%"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 </article>
